@@ -26,6 +26,7 @@ while ($true) {
 }
 
 function cdev { Set-Location $env:DEV }
+function exp { explorer.exe . }
 
 function pva { venv/Scripts/activate.ps1 }
 
