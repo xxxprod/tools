@@ -1,0 +1,1 @@
+Write-Output ". $(Get-Item .\PSProfile.ps1 | ForEach-Object { $_.FullName })" | Out-File $profile
