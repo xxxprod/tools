@@ -11,6 +11,7 @@ function greset { git reset $args }
 function gcommit { git commit -m $args }
 function gpull { git pull }
 function gpush { git push }
+function gprune { git remote prune origin }
 
 
 $parent = $userProfile
