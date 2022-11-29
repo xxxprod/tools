@@ -8,7 +8,7 @@ function gclone { git clone $args }
 function gcheckout { git checkout $args }
 function gadd { git add $args }
 function greset { git reset $args }
-function gcommit { git commit -m $args }
+function gcommit { git commit -m $($args -join ' ') }
 function gpull { git pull }
 function gpush { git push }
 function gprune { git remote prune origin }
@@ -27,6 +27,12 @@ while ($true) {
 }
 
 function cdev { Set-Location $env:DEV }
+function cdtools { Set-Location "$($env:DEV)/tools" }
+function cdmai { Set-Location "$($env:DEV)/mai" }
+function cddevproj { Set-Location "$($env:DEV)/mai/dev-project" }
+function cdmaster { Set-Location "$($env:DEV)/mai/master-thesis" }
+function cdsem3 { Set-Location "$($env:DEV)/mai/subjects/Semester3" }
+
 function exp { explorer.exe . }
 
 function pva { venv/Scripts/activate.ps1 }
