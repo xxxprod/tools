@@ -38,11 +38,13 @@
         "list": 
         [
             {
-                "backgroundImageStretchMode": "uniform",
+                "backgroundImage": "D:\\Development\\tools\\Powershell\\Backgrounds\\Smoke.avif",
+                "backgroundImageAlignment": "left",
+                "backgroundImageOpacity": 1.0,
+                "backgroundImageStretchMode": "uniformToFill",
                 "colorScheme": "One Half Dark",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -nologo",
                 "cursorShape": "underscore",
-                "elevate": false,
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
@@ -52,7 +54,7 @@
                 },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "PowerShell",
+                "name": "Windows PowerShell",
                 "opacity": 100,
                 "padding": "8",
                 "scrollbarState": "visible",
@@ -69,6 +71,18 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{0be8b7ee-1564-599e-b1df-654ae43c9b35}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{93831fe3-150a-5020-83a8-749cc22f0952}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             },
             {
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
