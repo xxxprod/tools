@@ -2,13 +2,13 @@
 $userProfile = $MyInvocation.MyCommand.Path
 function Edit-Profile { code $userProfile }
 
-function gstatus { git status }
-function gdiff { git diff --color-words }
+function gstatus { git status $args }
+function gdiff { git diff --color-words $args }
 function gclone { git clone $args }
 function gcheckout { git checkout $args }
 function gadd { git add $args }
 function greset { git reset $args }
-function gcommit { git commit -m $args -join ' ' }
+function gcommit { git commit -m $($args -join ' ') }
 function gpull { git pull }
 function gpush { git push }
 
