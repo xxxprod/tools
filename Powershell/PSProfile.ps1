@@ -11,6 +11,7 @@ function greset { git reset $args }
 function gcommit { git commit -m $($args -join ' ') }
 function gpull { git pull }
 function gpush { git push }
+function gprune { git remote prune origin }
 
 
 $parent = $userProfile
@@ -24,6 +25,7 @@ while ($true) {
         break
     }
 }
+Clear-Host
 
 function cdev { Set-Location $env:DEV }
 function cdtools { Set-Location "$($env:DEV)/tools" }
@@ -34,13 +36,17 @@ function cdsem3 { Set-Location "$($env:DEV)/mai/subjects/Semester3" }
 
 function exp { explorer.exe . }
 
-function pva { venv/Scripts/activate.ps1 }
+if(Test-Path "venv") {
+    Write-Host "Activating venv"
+    
+    function pva { venv/Scripts/activate.ps1 }
+    pva
+}
 
 function prompt {
     Write-Host -NoNewline -ForegroundColor Blue "$(Get-Location)>"
     return " "
 }
 
-Clear-Host
 
 # Write-Host "$($MyInvocation.MyCommand.Path) loaded." -ForegroundColor Green
