@@ -36,16 +36,16 @@ function cdsem3 { Set-Location "$($env:DEV)/mai/subjects/Semester3" }
 
 function exp { explorer.exe . }
 
+function prompt {
+    Write-Host -NoNewline -ForegroundColor Blue "$(Get-Location)>"
+    return " "
+}
+
 if(Test-Path "venv") {
     Write-Host "Activating venv"
     
     function pva { venv/Scripts/activate.ps1 }
     pva
-}
-
-function prompt {
-    Write-Host -NoNewline -ForegroundColor Blue "$(Get-Location)>"
-    return " "
 }
 
 
