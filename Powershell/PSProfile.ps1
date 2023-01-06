@@ -41,12 +41,13 @@ function prompt {
     return " "
 }
 
-if(Test-Path "venv") {
-    Write-Host "Activating venv"
-    
-    function pva { venv/Scripts/activate.ps1 }
-    pva
+function pva { venv/Scripts/activate.ps1 }
+
+function Add-Path($Path) {
+    $env:Path += [IO.Path]::PathSeparator + $Path
 }
+
+Add-Path "$env:DEV\tools\Handle"
 
 
 # Write-Host "$($MyInvocation.MyCommand.Path) loaded." -ForegroundColor Green
