@@ -36,10 +36,10 @@ function cdsem3 { Set-Location "$($env:DEV)/mai/subjects/Semester3" }
 
 function exp { explorer.exe . }
 
-function prompt {
-    Write-Host -NoNewline -ForegroundColor Blue "$(Get-Location)>"
-    return " "
-}
+# function prompt {
+#     Write-Host -NoNewline -ForegroundColor Blue "$(Get-Location)>"
+#     return " "
+# }
 
 function pva { venv/Scripts/activate.ps1 }
 
@@ -49,5 +49,15 @@ function Add-Path($Path) {
 
 Add-Path "$env:DEV\tools\Handle"
 
+$env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 
 # Write-Host "$($MyInvocation.MyCommand.Path) loaded." -ForegroundColor Green
+
+# https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
+# Themes https://ohmyposh.dev/docs/themes
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\cobalt2.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\craver.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\easy-term.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$($env:DEV)\tools\Powershell\OhMyPosh\powerlevel10k_rainbow.omp.json" | Invoke-Expression
+
