@@ -55,9 +55,9 @@ $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 
 # https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup
 # Themes https://ohmyposh.dev/docs/themes
-# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\cobalt2.omp.json" | Invoke-Expression
-# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\craver.omp.json" | Invoke-Expression
-# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\easy-term.omp.json" | Invoke-Expression
-# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json" | Invoke-Expression
+
+# https://github.com/ryanoasis/nerd-fonts
+#.\install.ps1 -WindowsCompatibleOnly CascadiaCode
+
 oh-my-posh init pwsh --config "$($env:DEV)\tools\Powershell\OhMyPosh\powerlevel10k_rainbow.omp.json" | Invoke-Expression
 
