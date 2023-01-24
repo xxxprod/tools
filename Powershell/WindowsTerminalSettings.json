@@ -34,21 +34,27 @@
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "font": 
+            {
+                "face": "CaskaydiaCove NFM"
+            }
+        },
         "list": 
         [
             {
                 "backgroundImage": "D:\\Development\\tools\\Powershell\\Backgrounds\\Smoke.avif",
                 "backgroundImageAlignment": "left",
-                "backgroundImageOpacity": 1.0,
+                "backgroundImageOpacity": 0.41999999999999998,
                 "backgroundImageStretchMode": "uniformToFill",
-                "colorScheme": "One Half Dark",
+                "colorScheme": "Campbell",
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -nologo",
                 "cursorShape": "underscore",
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "face": "Cascadia Code",
+                    "face": "CaskaydiaCove NFM",
                     "size": 10,
                     "weight": "normal"
                 },
